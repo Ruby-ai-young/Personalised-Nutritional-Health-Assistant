@@ -18,7 +18,7 @@ import requests
 path = os.getcwd()
 url =  "https://api.openai.com/v1/completions"
 # OpenAI API Key
-key = "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"
+key = "API_KEY"
 # Authorizing the connection
 headers = {"Authorization": f"Bearer {key}"}
 
