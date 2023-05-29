@@ -1,0 +1,291 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - morning
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good bye
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - none
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: bot_information
+  examples: |
+    - I want to know about Coeliac Disease
+    - I want to know about gluten-free
+- intent: general_coeliac_information
+  examples: |
+    - I want general information about Coeliac Disease
+    - I want general information about Celiac Disease
+    - I want to know about symptoms
+    - I want to know about treatment
+    - I want to know about specific Coeliac Disease information
+    - I want to know about associated diseases
+    - I want to know about gluten free
+    - I want to know about gluten-free
+    - What are common symptoms of Coeliac Disease?
+    - What is the treatment of Coeliac Disease?
+    - What are common symptoms of Celiac Disease?
+    - What is the treatment of Celiac Disease?
+- intent: specific_food_facts
+  examples: |
+    - Specific about gluten free food
+    - Specific about food
+    - Specific about gluten-free food
+    - Specific about food for individuals with Celiac Disease
+    - Specific about food for individuals with Coeliac Disease
+    - I want to know whether an item is gluten free
+- intent: specific_food_facts_product_name
+  examples: |
+    - Specific about gluten free food using the product name
+    - Specific about food using the product name
+    - Specific about gluten-free food using the product name
+    - Specific about food for individuals with Celiac Disease using the product name
+    - Specific about food for individuals with Coeliac Disease using the product name
+    - I want to search whether [Nutella](product_name) is gluten free
+- intent: specific_food_facts_barcode
+  examples: |
+    - Specific about gluten free food using the barcode
+    - Specific about food using the barcode
+    - Specific about gluten-free food using the barcode
+    - Specific about food for individuals with Celiac Disease using the barcode
+    - Specific about food for individuals with Coeliac Disease using the barcode
+    - I want to search whether [3017620420009](barcode) is gluten free
+- intent: nlu_fallback
+  examples: |
+    - what is love?
+    - what is life?
+    - 1+1
+    - maths equation
+- intent: product_name
+  examples: |
+    - Ahi tuna
+    - Almond
+    - Almond flour
+    - Gluten free almond flour
+    - Apple
+    - Apples
+    - Applesauce
+    - Apple juice
+    - Asian noodles
+    - Gluten free asian noodles
+    - Avocado
+    - Bacon
+    - Baked beans
+    - Banana
+    - BBQ sauce
+    - Beans
+    - Beer
+    - Bread
+    - Gluten free bread
+    - Brown Bread
+    - Gluten free brown bread
+    - Bruscetta
+    - Gluten free bruscetta
+    - Broccoli
+    - Buritto
+    - Gluten free buritto
+    - Cabbage
+    - Cake
+    - Gluten free cake
+    - Carrot
+    - Carrot cake
+    - Gluten free carrot cake
+    - Celery
+    - Chocolate
+    - Dark chocolate
+    - Milk chocolate
+    - White chocolate
+    - Chocolate cake
+    - Gluten free chocolate cake
+    - Chowder
+    - Cheese
+    - Cheesecake
+    - Gluten free cheescake
+    - Chicken
+    - Chips
+    - Crisps
+    - Clams
+    - Coffee
+    - Cookies
+    - Gluten free cookies
+    - Chocolate chip cookies
+    - Gluten free chocolate chip cookies
+    - Corn
+    - Cupcakes
+    - Gluten free cupcakes
+    - Crab
+    - Crab sticks
+    - Curry
+    - Cereal
+    - Gluten free cereal
+    - Dates
+    - Dip
+    - Duck
+    - Dumpling
+    - Gluten free dumpling
+    - Donut
+    - Gluten free donut
+    - Eggs
+    - Enchilada
+    - Gluten free enchilada
+    - Eggroll
+    - English muffin
+    - Edemame
+    - Eel
+    - Fajita
+    - Gluten free fajita
+    - Falafel
+    - Fish
+    - Fondu
+    - French toast
+    - Fries
+    - Garlic
+    - Ginger
+    - Gnocchi
+    - Goose
+    - Granola
+    - Grapes
+    - Green beans
+    - Guacamole
+    - Gumbo
+    - Grits
+    - Crackers
+    - Graham crackers
+    - Gluten free crackers
+    - Ham
+    - Hamburger
+    - Burger
+    - Cheeseburger
+    - Honey
+    - Hash bron
+    - Hot dog
+    - Hummus
+    - Ice cream
+    - Indian food
+    - Jelly
+    - Jam
+    - Jerky
+    - Jalapeno
+    - Kale
+    - Kabob
+    - Ketchup
+    - Kiwi
+    - Kidney bean
+    - Lobster
+    - Lamb
+    - Linguine
+    - Lasagna
+    - Lidl
+    - Meat
+    - Meatball
+    - Milk
+    - Milkshake
+    - Noodles
+    - Gluten free noodles
+    - Nutella
+    - Pizza
+    - Gluten free pizza
+    - Pepperoni
+    - Pancake
+    - Gluten free pancake
+    - Quesadilla
+    - Quiche
+    - Spinach
+    - Spaghetti
+    - Gluten free spaghetti
+    - Toast
+    - Gluten free toast
+    - Tortellini
+    - Gluten free tortellini
+    - Tuna
+    - Waffles
+    - Walnuts
+    - Gluten free waffles
+    - Wraps
+    - Gluten free wraps
+    - Wine
+    - Red wine
+    - White wine
+    - Yogurt
+    - Zucchini
+    - Old El Paso
+    - Philadelphia
+    - Schär
+    - Schar
+    - Pizza Margherita
+    - Pizza Sauce
+    - chocolate cake
+- intent: product_barcode
+  examples: |
+    - 3017620420009
+    - 9325175003009
+    - 8008698011065
+    - 8410076473981
+    - 8008698003152
+    - 10086988
+    - 3175681185388
+    - 8008698005576
+    - 7300400481823
+    - 8008698011683
+    - 8008698002209
+    - 1191858
+    - 7622300315733
+    - 8008698026090
+- intent: bot_feedback
+  examples: |
+    - This bot was really helpful
+    - The answer was helpful
+    - The answer was wrong
+    - This bot really helped me
+    - This bot was very useful
+    - It was very useful
+    - It was not useful
+    - Not helpful
+    - The chatbot gave good answer
+    - The response was good
+    - The user interface is very clean, especially the choice using clickable buttons, the conversation flow was easy to follow and the overall experience wwas good.

@@ -1,0 +1,50 @@
+[
+  {
+    "text": "I want to know about gluten free",
+    "intent": "general_coeliac_information",
+    "intent_prediction": {
+      "name": "bot_information",
+      "confidence": 0.5646497011184692
+    }
+  },
+  {
+    "text": "I want to know about gluten-free",
+    "intent": "general_coeliac_information",
+    "intent_prediction": {
+      "name": "bot_information",
+      "confidence": 0.7941545844078064
+    }
+  },
+  {
+    "text": "what is love?",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.010164645500481129
+    }
+  },
+  {
+    "text": "what is life?",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.010270017199218273
+    }
+  },
+  {
+    "text": "1+1",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.006830290425568819
+    }
+  },
+  {
+    "text": "maths equation",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.007648743223398924
+    }
+  }
+]

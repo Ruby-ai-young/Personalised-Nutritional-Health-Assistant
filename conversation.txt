@@ -1,0 +1,180 @@
+user: Hi
+bot: Hi! I am a chatbot personalised for individuals with Coeliac Disease. Kindly note that this chat conversation is being recorded for research, testing, and evaluation purposes.
+bot: What would you like to ask about? 
+user: /specific_food_facts
+bot: Would you like to search using the product name or barcode? 
+user: /specific_food_facts_product_name
+bot: Please provide the product name: 
+user: Chocolate
+bot: ------------------------
+bot: Disclaimer: The information provided for the following products may not be complete.
+bot: Thus, please exercise caution whilst using this information.
+bot: It is important to note that the presence of allergens is subject to change, and there may be a risk of cross-contamination.
+bot: Always refer to the product packaging and manufacturer for the most accurate and up-to-date allergen information.
+bot: ------------------------
+bot: To view this product kindly go to the following website: 
+bot: https://world.openfoodfacts.org/product/3046920028363/
+bot: Product Name: Excellence dark 85% cocoa 
+Brand: Lindt 
+Allergens: en:milk,en:nuts,en:sesame-seeds,en:soybeans 
+Nutrition Grade: e 
+Barcode: 3046920028363
+------------------------
+bot: Regarding the Nutrition Grade, kindly see the following image that explains this score. For further information kindly see the following website: https://www.baynsolutions.com/en/nutri-score-everything-you-need-to-know/1120217.
+bot: Was this response useful?
+user: Chocolate
+bot: ------------------------
+bot: Disclaimer: The information provided for the following products may not be complete.
+bot: Thus, please exercise caution whilst using this information.
+bot: It is important to note that the presence of allergens is subject to change, and there may be a risk of cross-contamination.
+bot: Always refer to the product packaging and manufacturer for the most accurate and up-to-date allergen information.
+bot: ------------------------
+bot: To view this product kindly go to the following website: 
+bot: https://world.openfoodfacts.org/product/3046920028363/
+bot: Product Name: Excellence dark 85% cocoa 
+Brand: Lindt 
+Allergens: en:milk,en:nuts,en:sesame-seeds,en:soybeans 
+Nutrition Grade: e 
+Barcode: 3046920028363
+------------------------
+bot: Regarding the Nutrition Grade, kindly see the following image that explains this score. For further information kindly see the following website: https://www.baynsolutions.com/en/nutri-score-everything-you-need-to-know/1120217.
+bot: Was this response useful?
+user: Chocolate
+bot: ------------------------
+bot: Disclaimer: The information provided for the following products may not be complete.
+bot: Thus, please exercise caution whilst using this information.
+bot: It is important to note that the presence of allergens is subject to change, and there may be a risk of cross-contamination.
+bot: Always refer to the product packaging and manufacturer for the most accurate and up-to-date allergen information.
+bot: ------------------------
+bot: To view this product kindly go to the following website: 
+bot: https://world.openfoodfacts.org/product/3046920028363/
+bot: Product Name: Excellence dark 85% cocoa 
+Brand: Lindt 
+Allergens: en:milk,en:nuts,en:sesame-seeds,en:soybeans 
+Nutrition Grade: e 
+Barcode: 3046920028363
+------------------------
+bot: Regarding the Nutrition Grade, kindly see the following image that explains this score. For further information kindly see the following website: https://www.baynsolutions.com/en/nutri-score-everything-you-need-to-know/1120217.
+bot: Was this response useful?
+user: Chocolate
+bot: ------------------------
+bot: Disclaimer: The information provided for the following products may not be complete.
+bot: Thus, please exercise caution whilst using this information.
+bot: It is important to note that the presence of allergens is subject to change, and there may be a risk of cross-contamination.
+bot: Always refer to the product packaging and manufacturer for the most accurate and up-to-date allergen information.
+bot: ------------------------
+bot: To view this product kindly go to the following website: 
+bot: https://world.openfoodfacts.org/product/3046920028363/
+bot: Product Name: Excellence dark 85% cocoa 
+Brand: Lindt 
+Allergens: en:milk,en:nuts,en:sesame-seeds,en:soybeans 
+Nutrition Grade: e 
+Barcode: 3046920028363
+------------------------
+bot: Regarding the Nutrition Grade, kindly see the following image that explains this score. For further information kindly see the following website: https://www.baynsolutions.com/en/nutri-score-everything-you-need-to-know/1120217.
+bot: Was this response useful?
+user: Chocolate
+bot: ------------------------
+bot: Disclaimer: The information provided for the following products may not be complete.
+bot: Thus, please exercise caution whilst using this information.
+bot: It is important to note that the presence of allergens is subject to change, and there may be a risk of cross-contamination.
+bot: Always refer to the product packaging and manufacturer for the most accurate and up-to-date allergen information.
+bot: ------------------------
+bot: To view this product kindly go to the following website: 
+bot: https://world.openfoodfacts.org/product/3046920028363/
+bot: Product Name: Excellence dark 85% cocoa 
+Brand: Lindt 
+Allergens: en:milk,en:nuts,en:sesame-seeds,en:soybeans 
+Nutrition Grade: e 
+Barcode: 3046920028363
+------------------------
+bot: Regarding the Nutrition Grade, kindly see the following image that explains this score. For further information kindly see the following website: https://www.baynsolutions.com/en/nutri-score-everything-you-need-to-know/1120217.
+bot: Was this response useful?
+user: Chocolate
+bot: ------------------------
+bot: Disclaimer: The information provided for the following products may not be complete.
+bot: Thus, please exercise caution whilst using this information.
+bot: It is important to note that the presence of allergens is subject to change, and there may be a risk of cross-contamination.
+bot: Always refer to the product packaging and manufacturer for the most accurate and up-to-date allergen information.
+bot: ------------------------
+bot: To view this product kindly go to the following website: 
+bot: https://world.openfoodfacts.org/product/3046920028363/
+bot: Product Name: Excellence dark 85% cocoa 
+Brand: Lindt 
+Allergens: en:milk,en:nuts,en:sesame-seeds,en:soybeans 
+Nutrition Grade: e 
+Barcode: 3046920028363
+------------------------
+bot: Regarding the Nutrition Grade, kindly see the following image that explains this score. For further information kindly see the following website: https://www.baynsolutions.com/en/nutri-score-everything-you-need-to-know/1120217.
+bot: Was this response useful?
+user: /affirm
+bot: Kindly write feedback for this chatbot.
+user: /deny
+bot: This chat including your feedback has been saved.
+user: /deny
+bot: This chat including your feedback has been saved.
+user: /affirm
+bot: This chat including your feedback has been saved.
+user: Thanks
+bot: This chat including your feedback has been saved.
+user: Hi
+bot: Hi! I am a chatbot personalised for individuals with Coeliac Disease. Kindly note that this chat conversation is being recorded for research, testing, and evaluation purposes.
+bot: What would you like to ask about? 
+user: /specific_food_facts
+bot: Would you like to search using the product name or barcode? 
+user: /specific_food_facts_product_name
+user: /specific_food_facts_product_name
+user: Cereal
+bot: ------------------------
+bot: Disclaimer: The information provided for the following products may not be complete.
+bot: Thus, please exercise caution whilst using this information.
+bot: It is important to note that the presence of allergens is subject to change, and there may be a risk of cross-contamination.
+bot: Always refer to the product packaging and manufacturer for the most accurate and up-to-date allergen information.
+bot: ------------------------
+bot: To view this product kindly go to the following website: 
+bot: https://world.openfoodfacts.org/product/3336972006014/
+bot: Product Name: Chips extra craquantes nature 
+Brand: Vico 
+Allergens:  
+Nutrition Grade: c 
+Barcode: 3336972006014
+------------------------
+bot: Regarding the Nutrition Grade, kindly see the following image that explains this score. For further information kindly see the following website: https://www.baynsolutions.com/en/nutri-score-everything-you-need-to-know/1120217.
+bot: Was this response useful?
+user: Cereal
+bot: ------------------------
+bot: Disclaimer: The information provided for the following products may not be complete.
+bot: Thus, please exercise caution whilst using this information.
+bot: It is important to note that the presence of allergens is subject to change, and there may be a risk of cross-contamination.
+bot: Always refer to the product packaging and manufacturer for the most accurate and up-to-date allergen information.
+bot: ------------------------
+bot: To view this product kindly go to the following website: 
+bot: https://world.openfoodfacts.org/product/3336972006014/
+bot: Product Name: Chips extra craquantes nature 
+Brand: Vico 
+Allergens:  
+Nutrition Grade: c 
+Barcode: 3336972006014
+------------------------
+bot: Regarding the Nutrition Grade, kindly see the following image that explains this score. For further information kindly see the following website: https://www.baynsolutions.com/en/nutri-score-everything-you-need-to-know/1120217.
+bot: Was this response useful?
+user: Cereal
+bot: ------------------------
+bot: Disclaimer: The information provided for the following products may not be complete.
+bot: Thus, please exercise caution whilst using this information.
+bot: It is important to note that the presence of allergens is subject to change, and there may be a risk of cross-contamination.
+bot: Always refer to the product packaging and manufacturer for the most accurate and up-to-date allergen information.
+bot: ------------------------
+bot: To view this product kindly go to the following website: 
+bot: https://world.openfoodfacts.org/product/3336972006014/
+bot: Product Name: Chips extra craquantes nature 
+Brand: Vico 
+Allergens:  
+Nutrition Grade: c 
+Barcode: 3336972006014
+------------------------
+bot: Regarding the Nutrition Grade, kindly see the following image that explains this score. For further information kindly see the following website: https://www.baynsolutions.com/en/nutri-score-everything-you-need-to-know/1120217.
+bot: Was this response useful?
+user: /affirm
+bot: Kindly write feedback for this chatbot.
+user: This chatbot’s response was good

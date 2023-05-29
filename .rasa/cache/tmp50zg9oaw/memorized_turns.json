@@ -1,0 +1,8 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taS2NhYA6dwbhQ==": "utter_greet",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpbhMiAUAQvc0lw==": "utter_coeliac_disease_information",
+    "eJylzEEKwzAMRNGr+AA5ga9SihDuNAgcuchyN8Z3r0uyDVlkNwOP/+hjCf1j+BInl6Ix9H2Q8oYYjpOlOnTaVmHTiM7rMawG+LhoNHcY7fROIRVk4UQvqeAKEn0X2/jvTrvPHzipVqQ=": "action_listen"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhuCA1OTMtMzk+LT8/JT4NqLq4tjYWAJNkISs=": "utter_ask_product_name",
+    "eJyNjEEKgDAMBL/SB/iCfkUklDaFoLYlSb0U/25Q73rbWYaZxzm50RgPCFGpFu/GM6CEHb17YSNRLOZ2QTaHiqF6Jw0jZYqQa02QzZbzo9hVkSHICo1r6lHv/2d6uQCff0Rr": "action_listen",
+    "eJytjkEOgCAMBL/CA3wBXzGmIViSRgVCixfC323Uiycu3nY3k92dW59MywVPcF4oRWvaIyC6A615zU4sGJWtjEUZimrFGs7oKZCHkNIKQWnug8YqggUcb5BLWquXO/+lenD2s9eXC98NYSk=": "action_call_food_facts",
+    "eJytjkEKxCAMRa/iAXoCr1JKkDRCqKNiYjfSu1faLmZWzqK7/PB4/8/tmEzLhXZwqJyiNe0+ILoPWfOEwKIUO1uFSmc49qjWSCZkzwg+pRV8p+UYGKsqFXCyQS5prajX/xX1YOxP338qdCF8Dxg4lxMKqIFr": "utter_did_that_help",
+    "eJytj0EOAiEMRa/CATwBVzGmaUrJNCIQWtyQubvEcaErTHTX37y8/p7HfnKjNr4DkknJ3o1jgIw39u4VkqhxnmxXbpORPKN5p5VJohDEUgLESeu+MHYzboB6hdpK6GTP/V/Ui7If975TEab0XuAn5/F5kAC2ocHGqa6ElwftX6CZ": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taS2NhYA6dwbhQ==": "utter_greet",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpbhMiAUAQvc0lw==": "utter_coeliac_disease_information",
+    "eJylzEEKwzAMRNGr+AA5ga9SihDuNAgcuchyN8Z3r0uyDVlkNwOP/+hjCf1j+BInl6Ix9H2Q8oYYjpOlOnTaVmHTiM7rMawG+LhoNHcY7fROIRVk4UQvqeAKEn0X2/jvTrvPHzipVqQ=": "action_listen"
+  }
+}

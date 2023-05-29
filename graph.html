@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rasa Core Visualisation</title>
+    <script src="https://dagrejs.github.io/project/dagre-d3/latest/dagre-d3.min.js"></script>
+    <script src="https://dagrejs.github.io/project/dagre/latest/dagre.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://dagrejs.github.io/project/graphlib-dot/v0.6.3/graphlib-dot.js"></script>
+</head>
+<body>
+<div id="errormsg" style="color: #b00"></div>
+<svg>
+    <style id="graph-style">
+        .node.invisible > rect {
+            display: none;
+        }
+
+        .node.start > rect {
+            fill: #7f7;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node.end > rect {
+            fill: #f77;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node:not(.active) > rect, .node:not(.active) > .label {
+            opacity: 0.4;
+        }
+
+        .edgePath:not(.active) path {
+            opacity: 0.4;
+        }
+
+        .node.ellipsis > rect {
+            fill: #CCC;
+        }
+
+        .node.intent > rect {
+            fill: #7ff;
+        }
+
+        .node.dashed > rect {
+            stroke-dasharray: 5;
+        }
+
+        text {
+            font-weight: 300;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serf, serif;
+            font-size: 14px;
+            color: #1f1d1d;
+        }
+
+        .node rect {
+            stroke: #444;
+            fill: #fff;
+            stroke-width: 1.5px;
+        }
+
+        .edgePath path {
+            stroke: #333;
+            stroke-width: 1.5px;
+        }
+
+        svg {
+            position: fixed;
+            top: 10px;
+            left: 0;
+            height: 100%;
+            width: 100%
+        }
+    </style>
+    <g></g>
+</svg>
+<script>
+
+  function serveGraph() {
+    let oldInputGraphValue;
+
+    const url = 'visualization.dot';
+    const refreshInterval = 500;
+
+    // trigger a refresh by fetching an updated graph
+    setInterval(function () {
+      fetch(url).then(r => r.text()).then(dot => {
+        document.getElementById('errormsg').innerHTML = '';
+        if (oldInputGraphValue === dot) return;
+
+        oldInputGraphValue = dot;
+        drawGraph(dot);
+      }).catch(err => {
+        document.getElementById('errormsg').innerHTML =
+          'Failed to update plot. (' + err.message + ')';
+      });
+    }, refreshInterval);
+  }
+
+  function drawGraph(graph) {
+    let g = graphlibDot.read(graph);
+    // Set margins, if not present
+    if (!g.graph().hasOwnProperty("marginx") &&
+      !g.graph().hasOwnProperty("marginy")) {
+      g.graph().marginx = 20;
+      g.graph().marginy = 20;
+    }
+    g.graph().transition = function (selection) {
+      return selection.transition().duration(300);
+    };
+    // Render the graph into svg g
+    d3.select("svg g").call(render, g);
+  }
+  // Set up zoom support
+  const svg = d3.select("svg"),
+    inner = d3.select("svg g"),
+    zoom = d3.zoom().on("zoom", function () {
+      inner.attr("transform", d3.event.transform);
+    });
+  svg.call(zoom);
+
+  // Create and configure the renderer
+  const render = dagreD3.render();
+
+  let isClient = false;
+  isClient = true;
+
+  if (isClient) {
+    // Mark all nodes and their edges as active
+    cssRules = document.getElementById('graph-style').sheet.cssRules;
+    cssRules[3].style.opacity = 1;
+    cssRules[4].style.opacity = 1;
+
+    let graph;
+    graph = `digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class="", fontsize=12, label=utter_greet];
+2 [class="", fontsize=12, label=utter_coeliac_disease_information];
+3 [class="", fontsize=12, label=utter_ask_question];
+4 [class="", fontsize=12, label=action_call_openai];
+5 [class="", fontsize=12, label=utter_did_that_help];
+6 [class="", fontsize=12, label=utter_feedback];
+7 [class="", fontsize=12, label=action_save_conversation];
+36 [class="", fontsize=12, label=utter_food_facts];
+37 [class="", fontsize=12, label=utter_ask_product_name];
+38 [class="", fontsize=12, label=action_call_food_facts];
+39 [class="", fontsize=12, label=utter_nutri_score];
+121 [class="", fontsize=12, label=utter_ask_product_barcode];
+122 [class="", fontsize=12, label=action_barcode_lookup_food_facts];
+210 [class="", fontsize=12, label=action_save_conversation];
+211 [class="", fontsize=12, label=utter_goodbye];
+263 [class="", fontsize=12, label="..."];
+266 [class="", fontsize=12, label=utter_iamabot];
+268 [class="", fontsize=12, label=utter_extra_information];
+269 [class=intent, fillcolor=lightblue, label="hey dude", shape=rect, style=filled];
+270 [class=intent, fillcolor=lightblue, label="What are common symptoms of Celiac Disease?", shape=rect, style=filled];
+271 [class=intent, fillcolor=lightblue, label=Dip, shape=rect, style=filled];
+272 [class=intent, fillcolor=lightblue, label=1191858, shape=rect, style=filled];
+273 [class=intent, fillcolor=lightblue, label="I want to know about gluten-free", shape=rect, style=filled];
+274 [class=intent, fillcolor=lightblue, label="Specific about gluten-free food", shape=rect, style=filled];
+275 [class=intent, fillcolor=lightblue, label="I want to know about specific Coeliac Disease information", shape=rect, style=filled];
+276 [class=intent, fillcolor=lightblue, label="of course", shape=rect, style=filled];
+277 [class=intent, fillcolor=lightblue, label=no, shape=rect, style=filled];
+278 [class=intent, fillcolor=lightblue, label=no, shape=rect, style=filled];
+279 [class=intent, fillcolor=lightblue, label=indeed, shape=rect, style=filled];
+280 [class=intent, fillcolor=lightblue, label="Not helpful", shape=rect, style=filled];
+281 [class=intent, fillcolor=lightblue, label="The response was good", shape=rect, style=filled];
+282 [class=intent, fillcolor=lightblue, label="Specific about food using the product name", shape=rect, style=filled];
+283 [class=intent, fillcolor=lightblue, label="Specific about gluten-free food using the barcode", shape=rect, style=filled];
+284 [class=intent, fillcolor=lightblue, label="Gluten free cereal", shape=rect, style=filled];
+285 [class=intent, fillcolor=lightblue, label=8008698011683, shape=rect, style=filled];
+286 [class=intent, fillcolor=lightblue, label="see you around", shape=rect, style=filled];
+287 [class=intent, fillcolor=lightblue, label=cu, shape=rect, style=filled];
+288 [class=intent, fillcolor=lightblue, label="am I talking to a human?", shape=rect, style=filled];
+289 [class=intent, fillcolor=lightblue, label="what is life?", shape=rect, style=filled];
+0 -> 263  [class="", key=NONE, label=""];
+0 -> 269  [class="", key=0];
+0 -> 270  [class="", key=0];
+0 -> 271  [class="", key=0];
+0 -> 272  [class="", key=0];
+1 -> 2  [class="", key=NONE, label=""];
+2 -> 273  [class="", key=0];
+2 -> 274  [class="", key=0];
+3 -> 275  [class="", key=0];
+4 -> 5  [class="", key=NONE, label=""];
+5 -> 276  [class="", key=0];
+5 -> 277  [class="", key=0];
+6 -> 278  [class="", key=0];
+6 -> 279  [class="", key=0];
+6 -> 280  [class="", key=0];
+6 -> 281  [class="", key=0];
+7 -> "-1"  [class="", key=NONE, label=""];
+36 -> 282  [class="", key=0];
+36 -> 283  [class="", key=0];
+37 -> 284  [class="", key=0];
+38 -> 39  [class="", key=NONE, label=""];
+39 -> 5  [class="", key=NONE, label=""];
+121 -> 285  [class="", key=0];
+122 -> 39  [class="", key=NONE, label=""];
+210 -> 286  [class="", key=0];
+211 -> "-1"  [class="", key=NONE, label=""];
+263 -> 287  [class="", key=0];
+263 -> 288  [class="", key=0];
+263 -> 289  [class="", key=0];
+266 -> "-1"  [class="", key=NONE, label=""];
+268 -> "-1"  [class="", key=NONE, label=""];
+269 -> 1  [class="", key=0];
+270 -> 4  [class="", key=0];
+271 -> 38  [class="", key=0];
+272 -> 122  [class="", key=0];
+273 -> 3  [class="", key=0];
+274 -> 36  [class="", key=0];
+275 -> 4  [class="", key=0];
+276 -> 6  [class="", key=0];
+277 -> 6  [class="", key=0];
+278 -> 7  [class="", key=0];
+279 -> 7  [class="", key=0];
+280 -> 7  [class="", key=0];
+281 -> 210  [class="", key=0];
+282 -> 37  [class="", key=0];
+283 -> 121  [class="", key=0];
+284 -> 38  [class="", key=0];
+285 -> 122  [class="", key=0];
+286 -> 211  [class="", key=0];
+287 -> 211  [class="", key=0];
+288 -> 266  [class="", key=0];
+289 -> 268  [class="", key=0];
+}
+`;
+    drawGraph(graph);
+  } else {
+    serveGraph();
+  }
+
+
+</script>
+</body>
+</html>

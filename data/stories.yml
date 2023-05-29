@@ -1,0 +1,557 @@
+version: "3.1"
+
+stories:
+- story: interactive_story_OpenAI_LLM_general_information_1_affirms
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: bot_information
+  - action: utter_ask_question
+  - intent: general_coeliac_information
+  - action: action_call_openai
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: bot_feedback
+  - action: action_save_conversation
+
+- story: interactive_story_OpenAI_LLM_general_info_1_skip_greet
+  steps:
+  - intent: general_coeliac_information
+  - action: action_call_openai
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: bot_feedback
+  - action: action_save_conversation
+  
+- story: interactive_story_OpenAI_LLM_general_information_2_denies
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: bot_information
+  - action: utter_ask_question
+  - intent: general_coeliac_information
+  - action: action_call_openai
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: bot_feedback
+  - action: action_save_conversation
+
+- story: interactive_story_OpenAI_LLM_general_info_2_skip_greet_denies
+  steps:
+  - intent: general_coeliac_information
+  - action: action_call_openai
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: bot_feedback
+  - action: action_save_conversation
+  
+- story: interactive_story_OpenAI_LLM_general_information_3_denies_and_denies_feedback
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: bot_information
+  - action: utter_ask_question
+  - intent: general_coeliac_information
+  - action: action_call_openai
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: action_save_conversation
+
+- story: interactive_story_OpenAI_LLM_general_info_3_skip_greet_denies_and_denies_feedback
+  steps:
+  - intent: general_coeliac_information
+  - action: action_call_openai
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: action_save_conversation
+  
+- story: interactive_story_OpenAI_LLM_general_information_4_affirms_and_denies_feedback
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: bot_information
+  - action: utter_ask_question
+  - intent: general_coeliac_information
+  - action: action_call_openai
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: action_save_conversation
+
+- story: interactive_story_OpenAI_LLM_general_info_4_skip_greet_affirms_and_denies_feedback
+  steps:
+  - intent: general_coeliac_information
+  - action: action_call_openai
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: action_save_conversation
+  
+- story: interactive_story_OpenAI_LLM_general_information_5_denies_and_affirms_feedback
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: bot_information
+  - action: utter_ask_question
+  - intent: general_coeliac_information
+  - action: action_call_openai
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: affirm
+  - action: action_save_conversation
+
+- story: interactive_story_OpenAI_LLM_general_info_5_skip_greet_denies_and_affirms_feedback
+  steps:
+  - intent: general_coeliac_information
+  - action: action_call_openai
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: affirm
+  - action: action_save_conversation
+  
+- story: interactive_story_OpenAI_LLM_general_information_6_affirms_and_affirms_feedback
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: bot_information
+  - action: utter_ask_question
+  - intent: general_coeliac_information
+  - action: action_call_openai
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: affirm
+  - action: action_save_conversation
+
+- story: interactive_story_OpenAI_LLM_general_info_6_skip_greet_affirms_and_affirms_feedback
+  steps:
+  - intent: general_coeliac_information
+  - action: action_call_openai
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: affirm
+  - action: action_save_conversation
+  
+- story: interactive_story_OFF_API_product_name_1_affirms
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: specific_food_facts
+  - action: utter_food_facts
+  - intent: specific_food_facts_product_name
+  - action: utter_ask_product_name
+  - intent: product_name
+  - action: action_call_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: bot_feedback
+  - action: action_save_conversation
+
+- story: interactive_story_OFF_API_product_name_1_skip_greet_affirms
+  steps:
+  - intent: product_name
+  - action: action_call_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: bot_feedback
+  - action: action_save_conversation
+  
+- story: interactive_story_OFF_API_product_name_2_denies
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: specific_food_facts
+  - action: utter_food_facts
+  - intent: specific_food_facts_product_name
+  - action: utter_ask_product_name
+  - intent: product_name
+  - action: action_call_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: bot_feedback
+  - action: action_save_conversation
+
+- story: interactive_story_OFF_API_product_name_2_skip_greet_denies
+  steps:
+  - intent: product_name
+  - action: action_call_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: bot_feedback
+  - action: action_save_conversation
+  
+- story: interactive_story_OFF_API_product_name_3_denies_and_denies_feedback
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: specific_food_facts
+  - action: utter_food_facts
+  - intent: specific_food_facts_product_name
+  - action: utter_ask_product_name
+  - intent: product_name
+  - action: action_call_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: action_save_conversation
+
+- story: interactive_story_OFF_API_product_name_3_skip_greet_denies_and_denies_feedback
+  steps:
+  - intent: product_name
+  - action: action_call_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: action_save_conversation
+  
+- story: interactive_story_OFF_API_product_name_4_affirms_and_denies_feedback
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: specific_food_facts
+  - action: utter_food_facts
+  - intent: specific_food_facts_product_name
+  - action: utter_ask_product_name
+  - intent: product_name
+  - action: action_call_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: action_save_conversation
+
+- story: interactive_story_OFF_API_product_name_4_skip_greet_affirms_and_denies_feedback
+  steps:
+  - intent: product_name
+  - action: action_call_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: action_save_conversation
+  
+- story: interactive_story_OFF_API_product_name_5_denies_and_affirms_feedback
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: specific_food_facts
+  - action: utter_food_facts
+  - intent: specific_food_facts_product_name
+  - action: utter_ask_product_name
+  - intent: product_name
+  - action: action_call_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: affirm
+  - action: action_save_conversation
+
+- story: interactive_story_OFF_API_product_name_5_skip_greet_denies_and_affirms_feedback
+  steps:
+  - intent: product_name
+  - action: action_call_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: affirm
+  - action: action_save_conversation
+  
+- story: interactive_story_OFF_API_product_name_6_affirms_and_affirms_feedback
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: specific_food_facts
+  - action: utter_food_facts
+  - intent: specific_food_facts_product_name
+  - action: utter_ask_product_name
+  - intent: product_name
+  - action: action_call_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: affirm
+  - action: action_save_conversation
+
+- story: interactive_story_OFF_API_product_name_6_skip_greet_affirms_and_affirms_feedback
+  steps:
+  - intent: product_name
+  - action: action_call_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: affirm
+  - action: action_save_conversation
+ 
+- story: interactive_story_OFF_API_barcode_1_affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: specific_food_facts
+  - action: utter_food_facts
+  - intent: specific_food_facts_barcode
+  - action: utter_ask_product_barcode
+  - intent: product_barcode
+  - action: action_barcode_lookup_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: bot_feedback
+  - action: action_save_conversation
+
+- story: interactive_story_OFF_API_barcode_1_skip_greet_affirm
+  steps:
+  - intent: product_barcode
+  - action: action_barcode_lookup_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: bot_feedback
+  - action: action_save_conversation
+
+- story: interactive_story_OFF_API_barcode_2_denies
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: specific_food_facts
+  - action: utter_food_facts
+  - intent: specific_food_facts_barcode
+  - action: utter_ask_product_barcode
+  - intent: product_barcode
+  - action: action_barcode_lookup_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: bot_feedback
+  - action: action_save_conversation
+
+- story: interactive_story_OFF_API_barcode_2_skip_greet_denies
+  steps:
+  - intent: product_barcode
+  - action: action_barcode_lookup_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: bot_feedback
+  - action: action_save_conversation
+  
+- story: interactive_story_OFF_API_barcode_3_denies_and_denies_feedback
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: specific_food_facts
+  - action: utter_food_facts
+  - intent: specific_food_facts_barcode
+  - action: utter_ask_product_barcode
+  - intent: product_barcode
+  - action: action_barcode_lookup_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: action_save_conversation
+
+- story: interactive_story_OFF_API_barcode_3_skip_greet_denies_and_denies_feedback
+  steps:
+  - intent: product_barcode
+  - action: action_barcode_lookup_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: action_save_conversation
+  
+- story: interactive_story_OFF_API_barcode_4_affirms_and_denies_feedback
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: specific_food_facts
+  - action: utter_food_facts
+  - intent: specific_food_facts_barcode
+  - action: utter_ask_product_barcode
+  - intent: product_barcode
+  - action: action_barcode_lookup_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: action_save_conversation
+
+- story: interactive_story_OFF_API_barcode_4_skip_greet_affirms_and_denies_feedback
+  steps:
+  - intent: product_barcode
+  - action: action_barcode_lookup_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: action_save_conversation
+  
+- story: interactive_story_OFF_API_barcode_5_denies_and_affirms_feedback
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: specific_food_facts
+  - action: utter_food_facts
+  - intent: specific_food_facts_barcode
+  - action: utter_ask_product_barcode
+  - intent: product_barcode
+  - action: action_barcode_lookup_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: affirm
+  - action: action_save_conversation
+
+- story: interactive_story_OFF_API_barcode_5_skip_greet_denies_and_affirms_feedback
+  steps:
+  - intent: product_barcode
+  - action: action_barcode_lookup_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_feedback
+  - intent: affirm
+  - action: action_save_conversation
+  
+- story: interactive_story_OFF_API_barcode_6_affirms_and_affirms_feedback
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: specific_food_facts
+  - action: utter_food_facts
+  - intent: specific_food_facts_barcode
+  - action: utter_ask_product_barcode
+  - intent: product_barcode
+  - action: action_barcode_lookup_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: affirm
+  - action: action_save_conversation
+
+- story: interactive_story_OFF_API_barcode_6_skip_greet_affirms_and_affirms_feedback
+  steps:
+  - intent: product_barcode
+  - action: action_barcode_lookup_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: affirm
+  - action: action_save_conversation
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: specific_food_facts
+  - action: utter_food_facts
+  - intent: specific_food_facts_barcode
+  - action: utter_ask_product_barcode
+  - intent: product_barcode
+  - action: action_barcode_lookup_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: bot_feedback
+  - action: action_save_conversation
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: specific_food_facts
+  - action: utter_food_facts
+  - intent: specific_food_facts_product_name
+  - action: utter_ask_product_name
+  - intent: product_name
+  - action: action_call_food_facts
+  - action: utter_nutri_score
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: bot_feedback
+  - action: action_save_conversation
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_coeliac_disease_information
+  - intent: bot_information
+  - action: utter_ask_question
+  - intent: general_coeliac_information
+  - action: action_call_openai
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_feedback
+  - intent: bot_feedback
+  - action: action_save_conversation
+  - intent: goodbye
+  - action: utter_goodbye

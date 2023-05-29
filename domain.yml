@@ -1,0 +1,89 @@
+version: '3.1'
+intents:
+- affirm
+- bot_challenge
+- bot_feedback
+- bot_information
+- deny
+- general_coeliac_information
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- nlu_fallback
+- product_barcode
+- product_name
+- specific_food_facts
+- specific_food_facts_barcode
+- specific_food_facts_product_name
+responses:
+  utter_greet:
+  - text: Hi! I am a chatbot personalised for individuals with Coeliac Disease. Kindly note that this chat conversation is being recorded for research, testing, and evaluation purposes.
+  utter_coeliac_disease_information:
+  - text: 'What would you like to ask about? '
+    buttons:
+    - title: Information
+      payload: /bot_information
+    - title: Food Facts
+      payload: /specific_food_facts
+  utter_food_facts:
+  - text: 'Would you like to search using the product name or barcode? '
+    buttons:
+    - title: Product Name
+      payload: /specific_food_facts_product_name
+    - title: Barcode
+      payload: /specific_food_facts_barcode
+  utter_ask_product_name:
+  - text: 'Please provide the product name: '
+  utter_ask_product_barcode:
+  - text: 'Please provide the product barcode: '
+  utter_product:
+  - text: |-
+      Product Name: {product_name} 
+      Brand: {brand} 
+      Allergens: {allergens} 
+      Nutrition Grade: {nutrition_grade} 
+      Barcode: {barcode}
+      ------------------------
+  utter_nutri_score:
+  - text: 'Regarding the Nutrition Grade, kindly see the following image that explains this score. For further information kindly see the following website: https://www.baynsolutions.com/en/nutri-score-everything-you-need-to-know/1120217.'
+    image: https://nutriscoreblog.files.wordpress.com/2022/05/image-3.png
+  utter_ask_question:
+  - text: Kindly ask your question regarding Coeliac Disease now.
+  utter_happy:
+  - text: Great, carry on!
+  utter_did_that_help:
+  - text: Was this response useful?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_feedback:
+  - text: Kindly write feedback for this chatbot.
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a chatbot, powered by Rasa, designed specifically to answer questions about Coeliac Disease.
+  utter_extra_information:
+  - text: I am a chatbot designed specifically to answer questions about Coeliac Disease. I cannot answer these type of questions.
+actions:
+- utter_feedback
+- utter_ask_product_name
+- utter_did_that_help
+- utter_greet
+- utter_food_facts
+- action_call_food_facts
+- utter_nutri_score
+- action_save_conversation
+- utter_goodbye
+- utter_coeliac_disease_information
+- action_barcode_lookup_food_facts
+- utter_ask_product_barcode
+- utter_ask_question
+- utter_happy
+- utter_product
+- action_call_openai
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
